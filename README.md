@@ -52,7 +52,7 @@ The constructor accepts two optional arguments:
    If no pattern is provided, the default is "M/d/yy" for the locales en_US and es_US, or "d/M/yy" for 
    en_CA, fr_CA, and en_GB.
    
-  * locale
+ * locale
  
    The locale for returned dates, comprised of an ISO-639 language code and an ISO-3166 country code. The 
    names of months and days will be returned in the locale provided. For example, if the locale is es_US, 
@@ -108,6 +108,14 @@ Format today's date like "Tuesday, July 10, 2012".
 var mySimpleDateFormatter = new simpleDateFormat('EEEE, MMMM d, yyyy');
 
 document.getElementById('myDateContainer').innerHTML = 'Today is ' + mySimpleDateFormatter.format();
+```
+
+Use a pattern which contains an apostrophe.
+
+```  js
+var mySimpleDateFormatter = new simpleDateFormat('h \'o\'\'clock\'');
+
+document.getElementById('myDateContainer').innerHTML = 'The time is ' + mySimpleDateFormatter.format();
 ```
 
 Use the applyPattern method to format a second date using a shorthand for the names of the day and month, like "Tue. Jul 10, 2012".
