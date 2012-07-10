@@ -1,10 +1,8 @@
 SimpleDateFormat for JavaScript
 ===============================
 
-Copyright (c) 2012 Noah Cooper (<noah.cooper@hotmail.com>)
-
-Dual licensed under MIT and GPL licenses (<http://projects.iamnoahcooper.com/license>)
-
+Copyright (c) 2012 Noah Cooper (<noah.cooper@hotmail.com>)  
+Dual licensed under MIT and GPL licenses (<http://projects.iamnoahcooper.com/license>)  
 Version: 1.0 (10-JUL-2012)
 
 Based on the SimpleDateFormat Java class 
@@ -34,14 +32,14 @@ The constructor accepts two optional arguments:
    The pattern to use for returned dates. The following subset of pattern letters from SimpleDateFormat 
    are supported:
    
-   y          - Year
-   M          - Month in year
-   d          - Day in month
-   E          - Day in week
-   a          - Am/pm marker
-   k(+nn|-nn) - Hour in day (1 - 24)
-   h(+nn|-nn) - Hour in am/pm (1 - 12)
-   m          - Minute in hour
+   y          - Year  
+   M          - Month in year  
+   d          - Day in month  
+   E          - Day in week  
+   a          - Am/pm marker  
+   k(+nn|-nn) - Hour in day (1 - 24)  
+   h(+nn|-nn) - Hour in am/pm (1 - 12)  
+   m          - Minute in hour  
    
    The pattern letters h and k may be followed by a plus (+) or minus (-) sign and an integer between 
    1 and 23 to adjust the hour accordingly. This is useful, for example, when working with a Date object 
