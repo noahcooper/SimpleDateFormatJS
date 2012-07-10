@@ -2,7 +2,9 @@ SimpleDateFormat for JavaScript
 ===============================
 
 Copyright (c) 2012 Noah Cooper (<noah.cooper@hotmail.com>)
+
 Dual licensed under MIT and GPL licenses (<http://projects.iamnoahcooper.com/license>)
+
 Version: 1.0 (10-JUL-2012)
 
 Based on the SimpleDateFormat Java class 
