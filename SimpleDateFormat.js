@@ -2,7 +2,7 @@
  * SimpleDateFormat for JavaScript - http://projects.iamnoahcooper.com/simpleDateFormat
  * Copyright (c) 2012 Noah Cooper (noah.cooper@hotmail.com)
  * Dual licensed under MIT and GPL licenses (http://projects.iamnoahcooper.com/license)
- * Version: 1.0 (10-JUL-2012)
+ * Version: 1.1 (01-OCT-2012)
  *
  * Based on the SimpleDateFormat Java class 
  * (http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html)
@@ -297,7 +297,8 @@ function simpleDateFormat(pattern, locale) {
                                    .replace(/MM/g, dateParts.month)
                                    .replace(/M/g, oneDigitNumber(dateParts.month))
                                    .replace(/march/g, 'March')
-                                   .replace(/may/g, 'May');
+                                   .replace(/may/g, 'May')
+                                   .replace(/Mayo/g, 'mayo');
       
       var formattedDayNames = ['Sunday', 
                                'Monday', 
