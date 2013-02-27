@@ -1,6 +1,6 @@
 /*
  * SimpleDateFormat for JavaScript - http://projects.iamnoahcooper.com/simpleDateFormat
- * Copyright (c) 2012 Noah Cooper (noah.cooper@hotmail.com)
+ * Copyright (c) 2013 Noah Cooper (noah.cooper@hotmail.com)
  * Dual licensed under MIT and GPL licenses (http://projects.iamnoahcooper.com/license)
  * Version: 1.2 (26-FEB-2013)
  *
