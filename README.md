@@ -1,9 +1,9 @@
 SimpleDateFormat for JavaScript
 ===============================
 
-Copyright (c) 2012 Noah Cooper (<noah.cooper@hotmail.com>)  
+Copyright (c) 2013 Noah Cooper (<noah.cooper@hotmail.com>)  
 Dual licensed under MIT and GPL licenses (<http://projects.iamnoahcooper.com/license>)  
-Version: 1.1 (01-OCT-2012)
+Version: 1.2 (26-FEB-2013)
 
 Based on the SimpleDateFormat Java class 
 (<http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html>)
@@ -50,7 +50,7 @@ The constructor accepts two optional arguments:
    "MMMM d, yyyy, 'at' h 'o''clock'".
    
    If no pattern is provided, the default is "M/d/yy" for the locales en_US and es_US, or "d/M/yy" for 
-   en_CA, fr_CA, and en_GB.
+   en_CA, fr_CA, en_GB, and en_AU.
    
  * locale
  
@@ -59,7 +59,8 @@ The constructor accepts two optional arguments:
    "d 'de' MMMM 'de' yyyy" will return a date such as "6 de julio de 2012". If locale is fr_CA, 
    "'le' d MMMM yyyy k'h'mm" will return a date such as "le 6 juillet 2012 13h00".
    
-   Currently supported values are "en_US", "es_US", "en_CA", "fr_CA", and "en_GB". The default is "en_US".
+   Currently supported values are "en_US", "es_US", "en_CA", "fr_CA", "en_GB", and "en_AU". The default 
+   is "en_US".
 
 The applyPattern Method
 -----------------------
