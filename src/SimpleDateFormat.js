@@ -1,8 +1,8 @@
 /*
- * SimpleDateFormat for JavaScript - http://projects.iamnoahcooper.com/simpleDateFormat
+ * SimpleDateFormat for JavaScript - https://github.com/noahcooper/SimpleDateFormatJS
  * Copyright (c) 2013 Noah Cooper (noah.cooper@hotmail.com)
  * Dual licensed under MIT and GPL licenses (http://projects.iamnoahcooper.com/license)
- * Version: 1.2 (26-FEB-2013)
+ * Version: 1.3 (25-JUL-2013)
  *
  * Based on the SimpleDateFormat Java class 
  * (http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html)
@@ -363,7 +363,7 @@ function simpleDateFormat(pattern, locale) {
       }
       else {
         for(var i = 0; i < formatPatternParts.length; i++) {
-          formatPatternParts2 = formatPatternParts[i].split('\'');
+          var formatPatternParts2 = formatPatternParts[i].split('\'');
           for(var j = 0; j < formatPatternParts2.length; j++) {
             if(j % 2 == 0) {
               formatPatternParts2[j] = patternReplace(formatPatternParts2[j]);
