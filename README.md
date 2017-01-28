@@ -1,7 +1,7 @@
 SimpleDateFormat for JavaScript
 ===============================
 
-Copyright (c) 2013 Noah Cooper (<noah.cooper@hotmail.com>)  
+Copyright (c) 2013 Noah Cooper  
 Dual licensed under MIT and GPL licenses (<http://projects.iamnoahcooper.com/license>)  
 Version: 1.3 (25-JUL-2013)
 
