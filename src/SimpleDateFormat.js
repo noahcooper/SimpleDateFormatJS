@@ -318,8 +318,11 @@ function simpleDateFormat(pattern, locale) {
                     .replace(/march/g, 'March')
                     .replace(/may/g, 'May')
                     .replace(/Mayo/g, 'mayo')
-                    .replace(/märz/g, 'März')
-                    .replace(/mai/g, 'Mai');
+                    .replace(/märz/g, 'März');
+
+                if(locale == 'de_DE'){
+                    formattedPart = formattedPart.replace(/mai/g, 'Mai');
+                }
 
                 var formattedDayNames = ['Sunday',
                     'Monday',
