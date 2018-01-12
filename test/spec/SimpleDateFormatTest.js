@@ -348,7 +348,7 @@ describe('SimpleDateFormat', function() {
         sdf = new simpleDateFormat('EEEE', 'es_US');
         var esUSWednesday = new Date(esUSDateClone.valueOf());
         esUSWednesday.setDate(21);
-        expect(sdf.format(esUSWednesday)).toBe('mi&eacute;rcoles');
+        expect(sdf.format(esUSWednesday)).toBe('miércoles');
       });
       
       it('should get Thursday correct', function() {
@@ -369,7 +369,7 @@ describe('SimpleDateFormat', function() {
         sdf = new simpleDateFormat('EEEE', 'es_US');
         var esUSSaturday = new Date(esUSDateClone.valueOf());
         esUSSaturday.setDate(24);
-        expect(sdf.format(esUSSaturday)).toBe('s&aacute;bado');
+        expect(sdf.format(esUSSaturday)).toBe('sábado');
       });
     });
   });
@@ -388,7 +388,7 @@ describe('SimpleDateFormat', function() {
         sdf = new simpleDateFormat('MMMM', 'fr_CA');
         var frCAFeb = new Date(frCADateClone.valueOf());
         frCAFeb.setMonth(1);
-        expect(sdf.format(frCAFeb)).toBe('f&#233;vrier');
+        expect(sdf.format(frCAFeb)).toBe('février');
       });
 
       it('should get March correct', function() {
@@ -430,7 +430,7 @@ describe('SimpleDateFormat', function() {
         sdf = new simpleDateFormat('MMMM', 'fr_CA');
         var frCAAugust = new Date(frCADateClone.valueOf());
         frCAAugust.setMonth(7);
-        expect(sdf.format(frCAAugust)).toBe('ao&#251;t');
+        expect(sdf.format(frCAAugust)).toBe('août');
       });
       
       it('should get September correct', function() {
@@ -458,7 +458,7 @@ describe('SimpleDateFormat', function() {
         sdf = new simpleDateFormat('MMMM', 'fr_CA');
         var frCADecember = new Date(frCADateClone.valueOf());
         frCADecember.setMonth(11);
-        expect(sdf.format(frCADecember)).toBe('d&#233;cembre');
+        expect(sdf.format(frCADecember)).toBe('décembre');
       });
     });
     
@@ -512,6 +512,289 @@ describe('SimpleDateFormat', function() {
         var frCASaturday = new Date(frCADateClone.valueOf());
         frCASaturday.setDate(24);
         expect(sdf.format(frCASaturday)).toBe('samedi');
+      });
+    });
+  });
+    /* es_US language tests */
+  describe('es_US', function() {
+    describe('Should use the correct month names', function() {
+      var esUSDateClone = sdfDate;
+      
+      it('should get January correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        expect(sdf.format(esUSDateClone)).toBe('enero');
+      });
+      
+      it('should get February correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSFeb = new Date(esUSDateClone.valueOf());
+        esUSFeb.setMonth(1);
+        expect(sdf.format(esUSFeb)).toBe('febrero');
+      });
+
+      it('should get March correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSMarch = new Date(esUSDateClone.valueOf());
+        esUSMarch.setMonth(2);
+        expect(sdf.format(esUSMarch)).toBe('marzo');
+      });
+      
+      it('should get April correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSApril = new Date(esUSDateClone.valueOf());
+        esUSApril.setMonth(3);
+        expect(sdf.format(esUSApril)).toBe('abril');
+      });
+      
+      it('should get May correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSMay = new Date(esUSDateClone.valueOf());
+        esUSMay.setMonth(4);
+        expect(sdf.format(esUSMay)).toBe('mayo');
+      });
+      
+      it('should get June correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSJune = new Date(esUSDateClone.valueOf());
+        esUSJune.setMonth(5);
+        expect(sdf.format(esUSJune)).toBe('junio');
+      });
+      
+      it('should get July correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSJuly = new Date(esUSDateClone.valueOf());
+        esUSJuly.setMonth(6);
+        expect(sdf.format(esUSJuly)).toBe('julio');
+      });
+      
+      it('should get August correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSAugust = new Date(esUSDateClone.valueOf());
+        esUSAugust.setMonth(7);
+        expect(sdf.format(esUSAugust)).toBe('agosto');
+      });
+      
+      it('should get September correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSSeptember = new Date(esUSDateClone.valueOf());
+        esUSSeptember.setMonth(8);
+        expect(sdf.format(esUSSeptember)).toBe('septiembre');
+      });
+      
+      it('should get October correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSOctober = new Date(esUSDateClone.valueOf());
+        esUSOctober.setMonth(9);
+        expect(sdf.format(esUSOctober)).toBe('octubre');
+      });
+      
+      it('should get November correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSNovember = new Date(esUSDateClone.valueOf());
+        esUSNovember.setMonth(10);
+        expect(sdf.format(esUSNovember)).toBe('noviembre');
+      });
+      
+      it('should get December correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'es_US');
+        var esUSDecember = new Date(esUSDateClone.valueOf());
+        esUSDecember.setMonth(11);
+        expect(sdf.format(esUSDecember)).toBe('diciembre');
+      });
+    });
+    
+    describe('Should use the correct day names', function() {
+      var esUSDateClone = sdfDate;
+      
+      it('should get Sunday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'es_US');
+        var esUSSunday = new Date(esUSDateClone.valueOf());
+        esUSSunday.setDate(18);
+        expect(sdf.format(esUSSunday)).toBe('domingo');
+      });
+      
+      it('should get Monday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'es_US');
+        var esUSMonday = new Date(esUSDateClone.valueOf());
+        esUSMonday.setDate(19);
+        expect(sdf.format(esUSMonday)).toBe('lunes');
+      });
+      
+      it('should get Tuesday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'es_US');
+        var esUSTuesday = new Date(esUSDateClone.valueOf());
+        esUSTuesday.setDate(20);
+        expect(sdf.format(esUSTuesday)).toBe('martes');
+      });
+      
+      it('should get Wednesday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'es_US');
+        var esUSWednesday = new Date(esUSDateClone.valueOf());
+        esUSWednesday.setDate(21);
+        expect(sdf.format(esUSWednesday)).toBe('miércoles');
+      });
+      
+      it('should get Thursday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'es_US');
+        var esUSThursday = new Date(esUSDateClone.valueOf());
+        esUSThursday.setDate(22);
+        expect(sdf.format(esUSThursday)).toBe('jueves');
+      });
+      
+      it('should get Friday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'es_US');
+        var esUSFriday = new Date(esUSDateClone.valueOf());
+        esUSFriday.setDate(23);
+        expect(sdf.format(esUSFriday)).toBe('viernes');
+      });
+      
+      it('should get Saturday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'es_US');
+        var esUSSaturday = new Date(esUSDateClone.valueOf());
+        esUSSaturday.setDate(24);
+        expect(sdf.format(esUSSaturday)).toBe('sábado');
+      });
+    });
+  });
+  
+  /* de_DE language tests */
+  describe('de_DE', function() {
+    describe('Should use the correct month names', function() {
+      var deDEDateClone = sdfDate;
+      
+      it('should get January correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        expect(sdf.format(deDEDateClone)).toBe('Januar');
+      });
+      
+      it('should get February correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDEFeb = new Date(deDEDateClone.valueOf());
+        deDEFeb.setMonth(1);
+        expect(sdf.format(deDEFeb)).toBe('Februar');
+      });
+
+      it('should get March correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDEMarch = new Date(deDEDateClone.valueOf());
+        deDEMarch.setMonth(2);
+        expect(sdf.format(deDEMarch)).toBe('März');
+      });
+      
+      it('should get April correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDEApril = new Date(deDEDateClone.valueOf());
+        deDEApril.setMonth(3);
+        expect(sdf.format(deDEApril)).toBe('April');
+      });
+      
+      it('should get May correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDEMay = new Date(deDEDateClone.valueOf());
+        deDEMay.setMonth(4);
+        expect(sdf.format(deDEMay)).toBe('Mai');
+      });
+      
+      it('should get June correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDEJune = new Date(deDEDateClone.valueOf());
+        deDEJune.setMonth(5);
+        expect(sdf.format(deDEJune)).toBe('Juni');
+      });
+      
+      it('should get July correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDEJuly = new Date(deDEDateClone.valueOf());
+        deDEJuly.setMonth(6);
+        expect(sdf.format(deDEJuly)).toBe('Juli');
+      });
+      
+      it('should get August correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDEAugust = new Date(deDEDateClone.valueOf());
+        deDEAugust.setMonth(7);
+        expect(sdf.format(deDEAugust)).toBe('August');
+      });
+      
+      it('should get September correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDESeptember = new Date(deDEDateClone.valueOf());
+        deDESeptember.setMonth(8);
+        expect(sdf.format(deDESeptember)).toBe('September');
+      });
+      
+      it('should get October correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDEOctober = new Date(deDEDateClone.valueOf());
+        deDEOctober.setMonth(9);
+        expect(sdf.format(deDEOctober)).toBe('Oktober');
+      });
+      
+      it('should get November correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDENovember = new Date(deDEDateClone.valueOf());
+        deDENovember.setMonth(10);
+        expect(sdf.format(deDENovember)).toBe('November');
+      });
+      
+      it('should get December correct', function() {
+        sdf = new simpleDateFormat('MMMM', 'de_DE');
+        var deDEDecember = new Date(deDEDateClone.valueOf());
+        deDEDecember.setMonth(11);
+        expect(sdf.format(deDEDecember)).toBe('Dezember');
+      });
+    });
+    
+    describe('Should use the correct day names', function() {
+      var deDEDateClone = sdfDate;
+      
+      it('should get Sunday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'de_DE');
+        var deDESunday = new Date(deDEDateClone.valueOf());
+        deDESunday.setDate(18);
+        expect(sdf.format(deDESunday)).toBe('Sonntag');
+      });
+      
+      it('should get Monday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'de_DE');
+        var deDEMonday = new Date(deDEDateClone.valueOf());
+        deDEMonday.setDate(19);
+        expect(sdf.format(deDEMonday)).toBe('Montag');
+      });
+      
+      it('should get Tuesday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'de_DE');
+        var deDETuesday = new Date(deDEDateClone.valueOf());
+        deDETuesday.setDate(20);
+        expect(sdf.format(deDETuesday)).toBe('Dienstag');
+      });
+      
+      it('should get Wednesday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'de_DE');
+        var deDEWednesday = new Date(deDEDateClone.valueOf());
+        deDEWednesday.setDate(21);
+        expect(sdf.format(deDEWednesday)).toBe('Mittwoch');
+      });
+      
+      it('should get Thursday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'de_DE');
+        var deDEThursday = new Date(deDEDateClone.valueOf());
+        deDEThursday.setDate(22);
+        expect(sdf.format(deDEThursday)).toBe('Donnerstag');
+      });
+      
+      it('should get Friday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'de_DE');
+        var deDEFriday = new Date(deDEDateClone.valueOf());
+        deDEFriday.setDate(23);
+        expect(sdf.format(deDEFriday)).toBe('Freitag');
+      });
+      
+      it('should get Saturday correct', function() {
+        sdf = new simpleDateFormat('EEEE', 'de_DE');
+        var deDESaturday = new Date(deDEDateClone.valueOf());
+        deDESaturday.setDate(24);
+        expect(sdf.format(deDESaturday)).toBe('Samstag');
       });
     });
   });

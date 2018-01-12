@@ -50,7 +50,7 @@ The constructor accepts two optional arguments:
    "MMMM d, yyyy, 'at' h 'o''clock'".
    
    If no pattern is provided, the default is "M/d/yy" for the locales en_US and es_US, or "d/M/yy" for 
-   en_CA, fr_CA, en_GB, and en_AU.
+   en_CA, fr_CA, en_GB, en_AU and de_DE.
    
  * locale
  
@@ -59,7 +59,7 @@ The constructor accepts two optional arguments:
    "d 'de' MMMM 'de' yyyy" will return a date such as "6 de julio de 2012". If locale is fr_CA, 
    "'le' d MMMM yyyy k'h'mm" will return a date such as "le 6 juillet 2012 13h00".
    
-   Currently supported values are "en_US", "es_US", "en_CA", "fr_CA", "en_GB", and "en_AU". The default 
+   Currently supported values are "en_US", "es_US", "en_CA", "fr_CA", "en_GB", "en_AU", "de_DE". The default 
    is "en_US".
 
 The applyPattern Method
