@@ -33,7 +33,7 @@
  * "MMMM d, yyyy, 'at' h 'o''clock'".
  *
  * If no pattern is provided, the default is "M/d/yy" for the locales en_US and es_US, or "d/M/yy" for 
- * en_CA, fr_CA, en_GB, and en_AU.
+ * en_CA, fr_CA, en_GB, en_AU, de_DE.
  *
  * locale (optional):
  * The locale for returned dates, comprised of an ISO-639 language code and an ISO-3166 country code. The 
@@ -41,12 +41,12 @@
  * "d 'de' MMMM 'de' yyyy" will return a date such as "6 de julio de 2012". If locale is fr_CA, 
  * "'le' d MMMM yyyy k'h'mm" will return a date such as "le 6 juillet 2012 13h00".
  
- * Currently supported values are "en_US", "es_US", "en_CA", "fr_CA", "en_GB", and "en_AU". The default 
+ * Currently supported values are "en_US", "es_US", "en_CA", "fr_CA", "en_GB", "en_AU" and "de_DE". The default 
  * is "en_US".
  */
 function simpleDateFormat(pattern, locale) {
   this.locale = (locale && (locale == 'es_US' || locale == 'en_CA' || locale == 'fr_CA' || 
-                 locale == 'en_GB' || locale == 'en_AU')) ? locale : 'en_US';
+                 locale == 'en_GB' || locale == 'en_AU' || locale == 'de_DE')) ? locale : 'en_US';
   
   /*
    * applyPattern is a public method which updates the pattern. It accepts one argument:
@@ -56,7 +56,7 @@ function simpleDateFormat(pattern, locale) {
    */
   this.applyPattern = function(updatedPattern) {
     this.pattern = updatedPattern || ((this.locale == 'en_CA' || this.locale == 'fr_CA' || 
-                                       this.locale == 'en_GB' || this.locale == 'en_AU') ? 
+                                       this.locale == 'en_GB' || this.locale == 'en_AU' || this.locale == 'de_DE') ? 
                                       'd/M/yy' : 'M/d/yy');
   };
   this.applyPattern(pattern);
@@ -293,6 +293,20 @@ function simpleDateFormat(pattern, locale) {
                                'novembre', 
                                'd&' + '#233;cembre'];
       }
+     if(locale == 'de_DE') {
+        formattedMonthNames = ['Januar', 
+                               'Februar', 
+                               'M&auml;rz',
+                               'April', 
+                               'Mai', 
+                               'Juni', 
+                               'Juli', 
+                               'August', 
+                               'September', 
+                               'Oktober', 
+                               'November', 
+                               'Dezember'];
+      }
       formattedPart = formattedPart.replace(/MMMM/g, formattedMonthNames[Number(dateParts.month) - 1])
                                    .replace(/MMM/g, formattedMonthNames[Number(dateParts.month) - 1]
                                                     .substring(0, 3))
@@ -327,6 +341,16 @@ function simpleDateFormat(pattern, locale) {
                              'vendredi', 
                              'samedi'];
       }
+      if(locale == 'de_DE') {
+        formattedDayNames = ['Sonntag', 
+                             'Montag', 
+                             'Dienstag', 
+                             'Mittwoch', 
+                             'Donnerstag', 
+                             'Freitag', 
+                             'Samstag'];
+      }
+     
       formattedPart = formattedPart.replace(/EEEE/g, formattedDayNames[dateParts.day])
                                    .replace(/EEE/g, formattedDayNames[dateParts.day].substring(0, 3))
                                    .replace(/EE/g, formattedDayNames[dateParts.day].substring(0, 3))
