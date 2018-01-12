@@ -1,10 +1,10 @@
 /* Credits to https://github.com/noahcooper/SimpleDateFormatJS*/
-/* SimpleDateFormatJS | Version: 1.3 (25-JUL-2013) */
+/* SimpleDateFormatJS | Version: 1.4 (12-JAN-2018) */
 /*
  * SimpleDateFormat for JavaScript - https://github.com/noahcooper/SimpleDateFormatJS
  * Copyright (c) 2013 Noah Cooper (noah.cooper@hotmail.com)
  * Dual licensed under MIT and GPL licenses (http://projects.iamnoahcooper.com/license)
- * Version: 1.3 (25-JUL-2013)
+ * Version: 1.4 (12-JAN-2018)
  *
  * Based on the SimpleDateFormat Java class
  * (http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html)
