@@ -1,15 +1,19 @@
 SimpleDateFormat for JavaScript
 ===============================
 
-Copyright (c) 2013 Noah Cooper  
+Copyright (c) 2019 Noah Cooper  
 Dual licensed under MIT and GPL licenses (<http://projects.iamnoahcooper.com/license>)  
-Version: 1.3 (25-JUL-2013)
+Version: 1.4 (26-JAN-2019)
 
 Based on the SimpleDateFormat Java class 
-(<http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html>)
+(<https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html>)
 
 Overview
 --------
+
+*With [wide support](https://caniuse.com/internationalization) for the 
+[Internationalization API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat), 
+this library is no longer needed in most cases.*
 
 While the JavaScript Date object provides developers with methods for working with the individual pieces 
 of a given date, what's missing is a native method for formatting dates as a string following a specified 

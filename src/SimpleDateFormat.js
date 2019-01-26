@@ -1,11 +1,11 @@
 /*
  * SimpleDateFormat for JavaScript - https://github.com/noahcooper/SimpleDateFormatJS
- * Copyright (c) 2013 Noah Cooper (noah.cooper@hotmail.com)
+ * Copyright (c) 2019 Noah Cooper (noah.cooper@hotmail.com)
  * Dual licensed under MIT and GPL licenses (http://projects.iamnoahcooper.com/license)
- * Version: 1.3 (25-JUL-2013)
+ * Version: 1.4 (26-JAN-2019)
  *
  * Based on the SimpleDateFormat Java class 
- * (http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html)
+ * (https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html)
  */
 
 /*
@@ -293,14 +293,22 @@ function simpleDateFormat(pattern, locale) {
                                'novembre', 
                                'd&' + '#233;cembre'];
       }
+      var formattedMonthShorthand3 = formattedMonthNames[Number(dateParts.month) - 1].substring(0, 3);
+      if(locale == 'fr_CA') {
+        if(formattedMonthShorthand3 == 'f&' + '#') {
+          formattedMonthShorthand3 = 'f&' + '#233;v';
+        }
+        else if(formattedMonthShorthand3 == 'ao&') {
+          formattedMonthShorthand3 = 'ao&' + '#251;';
+        }
+        else if(formattedMonthShorthand3 == 'd&' + '#') {
+          formattedMonthShorthand3 = 'd&' + '#233;c';
+        }
+      }
       formattedPart = formattedPart.replace(/MMMM/g, formattedMonthNames[Number(dateParts.month) - 1])
-                                   .replace(/MMM/g, formattedMonthNames[Number(dateParts.month) - 1]
-                                                    .substring(0, 3))
+                                   .replace(/MMM/g, formattedMonthShorthand3)
                                    .replace(/MM/g, dateParts.month)
-                                   .replace(/M/g, oneDigitNumber(dateParts.month))
-                                   .replace(/march/g, 'March')
-                                   .replace(/may/g, 'May')
-                                   .replace(/Mayo/g, 'mayo');
+                                   .replace(/M/g, oneDigitNumber(dateParts.month));
       
       var formattedDayNames = ['Sunday', 
                                'Monday', 
@@ -327,14 +335,28 @@ function simpleDateFormat(pattern, locale) {
                              'vendredi', 
                              'samedi'];
       }
+      var formattedDayShorthand3 = formattedDayNames[dateParts.day].substring(0, 3);
+      if(locale == 'es_US') {
+        if(formattedDayShorthand3 == 'mi&') {
+          formattedDayShorthand3 = 'mi&' + 'eacute;';
+        }
+        else if(formattedDayShorthand3 == 's&' + 'a') {
+          formattedDayShorthand3 = 's&' + 'aacute;b';
+        }
+      }
       formattedPart = formattedPart.replace(/EEEE/g, formattedDayNames[dateParts.day])
-                                   .replace(/EEE/g, formattedDayNames[dateParts.day].substring(0, 3))
-                                   .replace(/EE/g, formattedDayNames[dateParts.day].substring(0, 3))
-                                   .replace(/E/g, formattedDayNames[dateParts.day].substring(0, 3));
+                                   .replace(/EEE/g, formattedDayShorthand3)
+                                   .replace(/EE/g, formattedDayShorthand3)
+                                   .replace(/E/g, formattedDayShorthand3);
       
       formattedPart = formattedPart.replace(/A/g, dateParts.ampm)
-                                   .replace(/april/g, 'April')
-                                   .replace(/august/g, 'August');
+                                   .replace(/apr/g, 'Apr')
+                                   .replace(/aug/g, 'Aug');
+      
+      if(locale != 'es_US' && locale != 'fr_CA') {
+        formattedPart = formattedPart.replace(/mar/g, 'Mar')
+                                     .replace(/may/g, 'May');
+      }
       
       return formattedPart;
     };
